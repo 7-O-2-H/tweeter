@@ -7,28 +7,21 @@
   background-color: #4956a1;
   position: fixed;
   top: 0px;
+  padding: 1.5em;
 }
 
-.left-box {
-  display: flex;
-  justify-content: start;
-  background-color: #4956a1;
+.title {
   color: #FFFFFF;
   font-family:'Bungee', sans-serif;
   font-size: 44px;
-  padding-top: 1.1em;
-  padding-left: 1.5em;
 } 
 
 .right-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 1.8em;
-  padding-right:1.5em;
+  align-items: center;
   font-family: "Source-sans-pro", sans-serif;
   font-weight: 300;
-  background-color: #4956a1;
   color: #FFFFFF;
 }
 
