@@ -10,6 +10,8 @@ $(document).ready(function() {
     counter.val(maxChars - charLength);
     if(counter.val() < 0) {
       counter.css("color", "red");
+    } else {
+    counter.css("color", "#545149");
     }
   });
 
