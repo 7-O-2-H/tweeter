@@ -9,9 +9,7 @@ $(document).ready(function() {
     const charLength = $(this).val().length;
     counter.val(maxChars - charLength);
     if(counter.val() < 0) {
-      counter.addClass('red-text');
-    } else {
-      counter.removeClass('red-text');
+      counter.css("color", "red");
     }
   });
 
