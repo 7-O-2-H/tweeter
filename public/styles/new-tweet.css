@@ -1,0 +1,22 @@
+.tweet-text {
+  border-bottom: black;
+}
+
+#new-tweet {
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+button {
+  display: inline-block;
+  background-color: #4956a1;
+  color: white;
+  font-family: 'bungee';
+}
+
+.counter {
+  display: flex;
+  align-self: right;
+  flex-direction: row;
+}

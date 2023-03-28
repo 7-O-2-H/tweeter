@@ -1,0 +1,13 @@
+.header {
+  display:flex;
+  height: 520px;
+  padding-top: 120px;
+  width: 100%;
+  font-weight: 300;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
