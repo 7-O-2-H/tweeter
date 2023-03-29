@@ -23,21 +23,18 @@ body {
 
 /* .container {
   display: flex;
-  flex-direction: column;
-  background-color: #f4f1ec;
-  align-items: center;
-  margin: 0;
-  padding-left: 5%;
-  padding-right: 5%;
+  justify-content: center;
 } */
 
 .tweets-container {
   display: flex;
   flex-direction: column;
-  width: 90%
+  width: 90%;
 }
+
 .tweet {
   display: flex;
+  flex-direction: column;
   width: 80%;
   border: solid;
   border-width: 5px;
@@ -48,23 +45,17 @@ body {
 .user-info {
   display: flex;
   justify-content: space-between;
-  padding: .5em;
+  padding: .5em 3%;
 }
 
-/* .example-tweet {
-  display: flex;
-  border-bottom: solid;
-  border-width: 3px;
-  width: 90%;
-  justify-content: center;
-  margin-left: 5%;
-  margin-bottom: 5%;
-} */
+
 
 .tweet-text {
   display: flex;
   flex-direction: row;
-  align-self: center;
+  align-self: start;
+  /* border-bottom: solid;
+  border-width: 90%; */
   padding-left: 3%;
   padding-right: 3%;
 }
@@ -72,7 +63,7 @@ body {
 .clickable-actions {
   display: flex;
   justify-content: space-between;
-  padding: .5em 5%;
+  padding: .5em 3%;
   font-size: medium;
 }
 
