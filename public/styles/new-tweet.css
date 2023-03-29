@@ -7,10 +7,13 @@
   font-size: smaller;
 }
 
+.placeholder {
+  font-size: medium;
+}
 .new-tweet textarea{
   display: inline-block;
   background-color: transparent;
-  font-size: small;
+  font-size: 25px;
   border-top: none;
   border-right: none;
   border-left: none;
