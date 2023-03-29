@@ -31,6 +31,38 @@ main {
   padding-right: 5%;
 }
 
+.tweet-container {
+  width: 80%;
+  border: solid;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  padding: .5em;
+}
+
+.example-tweet {
+  display: flex;
+  border-bottom: solid;
+  width: 90%;
+  justify-content: center;
+  margin-left: 5%;
+  margin-bottom: 0%;
+}
+
+.example-tweet {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+}
+
+.clickable-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: .5em 5%;
+  font-size: medium;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
