@@ -10,6 +10,7 @@
   border-right: none;
   border-left: none;
   border-bottom: solid;
+  border-width: 3px;
   width: 100%;
 }
 

@@ -34,6 +34,7 @@ main {
 .tweet-container {
   width: 80%;
   border: solid;
+  border-width: 5px;
 }
 
 .user-info {
@@ -45,6 +46,7 @@ main {
 .example-tweet {
   display: flex;
   border-bottom: solid;
+  border-width: 3px;
   width: 90%;
   justify-content: center;
   margin-left: 5%;
