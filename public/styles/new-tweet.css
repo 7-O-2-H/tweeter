@@ -1,15 +1,13 @@
 .new-tweet {
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 3%;
 }
 
 .tweet-text {
   font-size: smaller;
 }
 
-.placeholder {
-  font-size: medium;
-}
 .new-tweet textarea{
   display: inline-block;
   background-color: transparent;
