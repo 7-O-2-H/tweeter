@@ -1,3 +1,8 @@
+.new-tweet {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .tweet-text {
   font-size: smaller;
 }
