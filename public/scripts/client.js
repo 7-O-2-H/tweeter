@@ -1,24 +1,24 @@
 const createTweetElement = (data) => {
 
   return `
-  <article class="tweet">  
-    <header class="user-info">
-      <section class="image-name">
-        <div class="avatar"><img src= ${data.user.avatars}></div>
-        <div class="user-name">${data.user.name}</div>
-      </section>
-      <div>${data.user.handle}</div>
-    </header> 
-    <p class="tweet-text">${data.content.text}</p> 
-    <footer class="clickable-actions">
-      <div class="t-since-posted">${data.created_at}</div>
-      <div class="clickables">
-        <i class="fa-solid fa-flag"></i>
-        <i class="fa-solid fa-retweet"></i>
-        <i class="fa-solid fa-heart"></i>
-      </div>
-    </footer>
-  </article>
+    <article class="tweet">  
+      <header class="user-info">
+        <section class="image-name">
+          <div class="avatar"><img src= ${data.user.avatars}></div>
+          <div class="user-name">${data.user.name}</div>
+        </section>
+        <div>${data.user.handle}</div>
+      </header> 
+      <p class="tweet-text">${data.content.text}</p> 
+      <footer class="clickable-actions">
+        <div class="t-since-posted">${data.created_at}</div>
+        <div class="clickables">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>
   `;
 }
 
@@ -66,9 +66,6 @@ $(document).ready(function() {
     .then(function() {
       loadFeed();
     });
-    // .catch(function (err) {
-    //   console.log(err);
-    // })
 
   });
 
