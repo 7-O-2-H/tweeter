@@ -35,6 +35,8 @@ body {
   border-width: 5px;
   justify-content: center;
   margin: 3% 3% 0 3%;
+  box-shadow: none;
+  
 }
 
 .user-info {

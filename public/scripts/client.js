@@ -1,3 +1,7 @@
+
+
+
+
 const createTweetElement = (data) => {
   let $tweet = `
   <article class="tweet">  
@@ -14,7 +18,7 @@ const createTweetElement = (data) => {
       <div class="clickables">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
-        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
       </div>
     </footer>
   </article>
