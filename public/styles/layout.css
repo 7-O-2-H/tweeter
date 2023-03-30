@@ -21,11 +21,6 @@ body {
   font-size: 24px;
 }
 
-/* .container {
-  display: flex;
-  justify-content: center;
-} */
-
 .tweets-container {
   display: flex;
   flex-direction: column;
@@ -48,17 +43,30 @@ body {
   padding: .5em 3%;
 }
 
+.image-name {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.user-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 
 .tweet-text {
   display: flex;
   flex-direction: row;
   align-self: start;
-  /* border-bottom: solid;
-  border-width: 90%; */
   padding-left: 3%;
   padding-right: 3%;
 }
+
+
+
 
 .clickable-actions {
   display: flex;

@@ -2,7 +2,10 @@ const createTweetElement = (data) => {
   let $tweet = `
   <article class="tweet">  
     <header class="user-info">
-      <div><img src= ${data.user.avatars} />${data.user.name}</div>
+      <section class="image-name">
+        <div class="avatar"><img src= ${data.user.avatars}></div>
+        <div class="user-name">${data.user.name}</div>
+        </section>
       <div>${data.user.handle}</div>
     </header> 
     <p class="tweet-text">${data.content.text}</p> 
@@ -54,9 +57,25 @@ $(document).ready(function() {
     }
   ]
 
-renderTweets(data);
+  renderTweets(data);
 
-  // const $tweet = createTweetElement(tweetData);
-  // $('.tweets-container').append($tweet);  
+  $('.post-tweet').on('submit', function (event) {
+    event.preventDefault();
+    const input = $('.new-tweet-text').val();
+    console.log(input);
+
+    // $.ajax({
+    //   method: "POST",
+    //   action: '/tweets',
+    //   data: "field1=tweet&field2=user-info&
+    // })
+    // .then(function(data) {
+    //   renderTweets(data);
+    // })
+    // .catch(function (err) {
+    //   console.log(err);
+    // })
+
+  })
 
 });
