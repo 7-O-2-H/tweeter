@@ -3,7 +3,7 @@ $(document).ready(function() {
   const tweet = $('.tweet');
 
   tweet.on('mouseover', function() {
-    tweet.css("box-shadow", "5px 5px 1px #545149");
+    tweet.css("box-shadow", "5px 5px 1px #B2BEB5");
   });
   tweet.on('mouseleave', function() {
     tweet.css("box-shadow", "none");

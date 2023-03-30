@@ -50,8 +50,6 @@ body {
   flex-direction: row;
 }
 
-
-
 .user-name {
   display: flex;
   flex-direction: column;
