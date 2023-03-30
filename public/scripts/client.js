@@ -1,8 +1,8 @@
 const createTweetElement = (data) => {
-  return `
+  let $tweet = `
   <article class="tweet">  
     <header class="user-info">
-      <div>${data.user.name}</div>
+      <div><img src= ${data.user.avatars} />${data.user.name}</div>
       <div>${data.user.handle}</div>
     </header> 
     <p class="tweet-text">${data.content.text}</p> 
@@ -16,27 +16,47 @@ const createTweetElement = (data) => {
     </footer>
   </article>
   `;
+  return $tweet;
+}
+
+
+const renderTweets = (tweetData) => {
+  for (const tweet of tweetData) {
+    $('.tweets-container').append(createTweetElement(tweet));
+  }
 }
 
 
 $(document).ready(function() {
 
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+  const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
+        "handle": "@SirIsaac"
       },
-    "content": {
+      "content": {
         "text": "If I have seen further it is by standing on the shoulders of giants"
       },
-    "created_at": 1461116232227
-  }
+      "created_at": 1461116232227
+    },
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@rd" },
+      "content": {
+        "text": "Je pense , donc je suis"
+      },
+      "created_at": 1461113959088
+    }
+  ]
 
+renderTweets(data);
 
-
-  const $tweet = createTweetElement(tweetData);
-  console.log($tweet); // to see what it looks like
-  $('.tweets-container').append($tweet);  
+  // const $tweet = createTweetElement(tweetData);
+  // $('.tweets-container').append($tweet);  
 
 });
