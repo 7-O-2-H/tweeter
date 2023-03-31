@@ -11,3 +11,8 @@
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
+@media only screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
