@@ -4,7 +4,7 @@ const renderTweets = (tweetData) => {
   });
 };
 
-const escape = function (str) {
+const safeText = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -22,7 +22,7 @@ const createTweetElement = (data) => {
         </section>
         <div>${data.user.handle}</div>
       </header> 
-      <p class="tweet-text">${escape(data.content.text)}</p> 
+      <p class="tweet-text">${safeText(data.content.text)}</p> 
       <footer class="clickable-actions">
         <div class="t-since-posted">${posted}</div>
         <div class="clickables">
@@ -51,8 +51,8 @@ const addToFeed = () => {
     method: "GET",
     url: "/tweets"
   })
-    .then(function(data) {
-      $('.tweet-container').prepend(createTweetElement(data[data.length - 1]));
+  .then(function(data) {
+      $('.tweets-container').prepend(createTweetElement(data[data.length - 1]));
     });
 };
 
