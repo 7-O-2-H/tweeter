@@ -4,6 +4,12 @@ const renderTweets = (tweetData) => {
   });
 };
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = (data) => {
   const posted = timeago.format(data.created_at, "en_US");
 
@@ -16,7 +22,7 @@ const createTweetElement = (data) => {
         </section>
         <div>${data.user.handle}</div>
       </header> 
-      <p class="tweet-text">${data.content.text}</p> 
+      <p class="tweet-text">${escape(data.content.text)}</p> 
       <footer class="clickable-actions">
         <div class="t-since-posted">${posted}</div>
         <div class="clickables">
