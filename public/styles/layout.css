@@ -68,16 +68,22 @@ body {
   width: 100%;
   padding-left: 3%;
   padding-right: 3%;
-  border-bottom: solid;
   font-weight: 600;
+  word-wrap: break-word;
+  border-bottom: 0;
 }
 
+.hero {
+  display: none;
+}
 
 .clickable-actions {
+  border-top: solid;
   display: flex;
   justify-content: space-between;
   padding: .5em 3%;
   font-size: medium;
+  background-color: lightblue;
 }
 
 .fa-solid.fa-flag:hover {
@@ -91,6 +97,8 @@ body {
 .fa-solid.fa-heart:hover {
   color: #C41E3A;
 }
+
+/* Desktop Layout */
 
 @media only screen and (min-width: 1024px) {
   main {
@@ -106,8 +114,26 @@ body {
     flex-direction: column;
   }
 
-  .header {
-    float: left;
-    width: 20%;
+  .tweets-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    margin-left: 1%;
   }
+
+  .hero {
+    position: fixed;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    height: 100%;
+    width: 30%;
+    margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
