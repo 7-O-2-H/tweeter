@@ -1,5 +1,11 @@
+const renderTweets = (tweetData) => {
+  tweetData.forEach(userInfo => {
+    $('.tweets-container').prepend(createTweetElement(userInfo));
+  });
+};
+
 const createTweetElement = (data) => {
-  const time = timeago.format(data.created_at, "en_US");
+  const posted = timeago.format(data.created_at, "en_US");
 
   return `
     <article class="tweet">  
@@ -12,7 +18,7 @@ const createTweetElement = (data) => {
       </header> 
       <p class="tweet-text">${data.content.text}</p> 
       <footer class="clickable-actions">
-        <div class="t-since-posted">${time}</div>
+        <div class="t-since-posted">${posted}</div>
         <div class="clickables">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -21,14 +27,8 @@ const createTweetElement = (data) => {
       </footer>
     </article>
   `;
-
-}
-
-const renderTweets = (tweetData) => {
-  tweetData.forEach(userInfo => {
-    $('.tweets-container').prepend(createTweetElement(userInfo));
-  });
 };
+
 
 const loadTweets = function() {
   $.ajax({
@@ -40,14 +40,14 @@ const loadTweets = function() {
   });
 };
 
-const loadFeed = () => {
+const addToFeed = () => {
   $.ajax({
     method: "GET",
-    url: "/tweets",
+    url: "/tweets"
   })
-  .then(function(data) {
-    $('.tweet-container').prepend(createTweetElement(data[data.length - 1]));
-  });
+    .then(function(data) {
+      $('.tweet-container').prepend(createTweetElement(data[data.length - 1]));
+    });
 };
 
 
@@ -76,12 +76,14 @@ $(document).ready(function() {
 
     $.ajax({
       method: "POST",
-      action: '/tweets',
+      url: '/tweets',
       data: input,
     })
-      .then(function() {
-        loadFeed();
-      });
+    .then(function() {
+      addToFeed();
+      $("#tweet-text").val("");
+      $(".counter").val(140);
+    });
 
   });
 

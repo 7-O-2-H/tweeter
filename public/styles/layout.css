@@ -65,8 +65,12 @@ body {
   display: flex;
   flex-direction: row;
   align-self: start;
+  width: 100%;
   padding-left: 3%;
   padding-right: 3%;
+  border-bottom: solid;
+  border-bottom-width: 90%;
+  font-weight: 600;
 }
 
 

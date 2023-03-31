@@ -8,10 +8,21 @@
   font-size: smaller;
 }
 
-.new-tweet textarea{
+.error-message {
+  display: flex;
+  color: red;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-left: solid;
+  justify-content: center;
+}
+
+.new-tweet textarea {
   display: inline-block;
   background-color: transparent;
   font-size: 25px;
+  font-weight: 600;
   border-top: none;
   border-right: none;
   border-left: none;
