@@ -4,7 +4,7 @@ const renderTweets = (tweetData) => {
   });
 };
 
-const safeText = function (str) {
+const safeText = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -41,9 +41,9 @@ const loadTweets = function() {
     method: "GET",
     url: "/tweets"
   })
-  .then(function(data) {
-    renderTweets(data);
-  });
+    .then(function(data) {
+      renderTweets(data);
+    });
 };
 
 const addToFeed = () => {
@@ -51,7 +51,7 @@ const addToFeed = () => {
     method: "GET",
     url: "/tweets"
   })
-  .then(function(data) {
+    .then(function(data) {
       $('.tweets-container').prepend(createTweetElement(data[data.length - 1]));
     });
 };
@@ -85,11 +85,11 @@ $(document).ready(function() {
       url: '/tweets',
       data: input,
     })
-    .then(function() {
-      addToFeed();
-      $("#tweet-text").val("");
-      $(".counter").val(140);
-    });
+      .then(function() {
+        addToFeed();
+        $("#tweet-text").val("");
+        $(".counter").val(140);
+      });
 
   });
 
