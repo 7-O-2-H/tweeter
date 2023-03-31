@@ -39,6 +39,10 @@ body {
   box-shadow: none;
 }
 
+.tweet:hover {
+  box-shadow: 5px 5px 1px #B2BEB5;
+}
+
 .user-info {
   display: flex;
   justify-content: space-between;
@@ -66,8 +70,6 @@ body {
 }
 
 
-
-
 .clickable-actions {
   display: flex;
   justify-content: space-between;
@@ -75,6 +77,14 @@ body {
   font-size: medium;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.fa-solid.fa-flag:hover {
+  color: goldenrod;
+}
+
+.fa-solid.fa-retweet:hover {
+  color: goldenrod;
+}
+
+.fa-solid.fa-heart:hover {
+  color: #C41E3A;
+}

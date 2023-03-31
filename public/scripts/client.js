@@ -1,4 +1,5 @@
 const createTweetElement = (data) => {
+  const time = timeago.format(data.created_at, "en_US");
 
   return `
     <article class="tweet">  
@@ -11,7 +12,7 @@ const createTweetElement = (data) => {
       </header> 
       <p class="tweet-text">${data.content.text}</p> 
       <footer class="clickable-actions">
-        <div class="t-since-posted">${data.created_at}</div>
+        <div class="t-since-posted">${time}</div>
         <div class="clickables">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -20,6 +21,7 @@ const createTweetElement = (data) => {
       </footer>
     </article>
   `;
+
 }
 
 const renderTweets = (tweetData) => {
@@ -53,19 +55,33 @@ $(document).ready(function() {
 
   loadTweets();
 
-  $('.post-tweet').on('submit', function (event) {
+  $('.post-tweet').on('submit', function(event) {
     event.preventDefault();
-    const input = $('.new-tweet-text').val();
-    const tweetLength = $('.new-tweet-text').val().length;
+    const input = $('#tweet-text').serialize();
+    const tweetLength = $('#tweet-text').val().length;
+
+    if (tweetLength) {
+      $(".error-message").slideUp();
+    }
+
+    if (tweetLength > 140) {
+      $(".error-message").text("You can't exceed 140 characters!").slideDown();
+      return;
+    }
+
+    if (tweetLength === 0) {
+      $(".error-message").text("You haven't entered any text!").slideDown();
+      return;
+    }
 
     $.ajax({
       method: "POST",
       action: '/tweets',
       data: input,
     })
-    .then(function() {
-      loadFeed();
-    });
+      .then(function() {
+        loadFeed();
+      });
 
   });
 
